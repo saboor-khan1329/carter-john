@@ -74,24 +74,24 @@ var swiper = new Swiper("#sec-5-review-slider", {
     freeMode: true,
     loop: true, // Enables looping
     autoplay: {
-      delay: 2500, // Auto-plays every 3 seconds
-      disableOnInteraction: false, // Keeps autoplay active even after user interaction
+        delay: 2500, // Auto-plays every 3 seconds
+        disableOnInteraction: false, // Keeps autoplay active even after user interaction
     },
     breakpoints: {
-      320: { // For small screens (phones)
-        slidesPerView: 1,
-        spaceBetween: 10,
-      },
-      768: { // For tablets
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1024: { // For desktops
-        slidesPerView: 3,
-        spaceBetween: 30,
-      },
+        320: { // For small screens (phones)
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        768: { // For tablets
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: { // For desktops
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
     },
-  });
+});
 
 
 //   mobile menu
@@ -99,7 +99,12 @@ var swiper = new Swiper("#sec-5-review-slider", {
 function toggleMenu() {
     var menu = document.getElementById("slideMenu");
     menu.classList.toggle("active");
+
 }
+
+
+
+// booking button popup
 
 function openPopup() {
     document.getElementById("popup").style.display = "flex";
@@ -107,6 +112,6 @@ function openPopup() {
 function closePopup() {
     document.getElementById("popup").style.display = "none";
 }
-  
+
 
 

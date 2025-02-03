@@ -82,6 +82,10 @@ body {
     background-image: url(images/hemp-burger.webp) !important;
 }
 
+.active-mob{
+    right: 0px;
+}
+
 // popup form
 
 .popup-overlay {
@@ -308,12 +312,34 @@ body {
             font-family: var(--sub-font);
             font-weight: 500;
             font-size: 14px;
-            line-height: 17px;
+            line-height: 22px;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: #FFFFFF !important;
+            color: var(--third-color) !important;
             transition: 250ms ease;
+            position: relative;
+            text-decoration: none;
+            padding: 0px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+                width: 100%;
+                height: 3px;
+                background-color: var(--secondary-color);
+                transition: transform 250ms ease-in-out;
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+            }
         }
+
+
 
         .nav-text:hover {
             color: var(--secondary-color) !important;
@@ -440,70 +466,7 @@ body {
     .sec-3-images-wrap {
         gap: 20px;
         width: 100%;
-        // .sec-3-panels{
-        //     background-image: url(images/sec-3-img-1.webp);
-        //     background-repeat: no-repeat;
-        //     background-position: center;
-        //     background-size: cover;
-        //     height: 600px;
-        //     flex: 0.5;
-        //     position: relative;
-        // }
-
-        // .sec-3-panels {
-        //     flex: 1;
-        //     height: 600px;
-        //     transition: all 0.3s ease-in-out;
-        //     // background-color: lightgray;
-        //     // margin: 5px;
-        //     // background-image: url(images/sec-3-img-1.webp);
-        //     background-repeat: no-repeat;
-        //     background-position: center;
-        //     background-size: cover;
-        //     padding-inline: 31px;
-        //     padding-bottom: 51px;
-        //     transition: flex 0.5s ease;
-        //     /* Smoothly animate panel expansion */
-        //     cursor: pointer;
-
-        //     /* Optional: make it clear the panels are interactive */
-        //     h5 {
-        //         font-size: 24px;
-        //         font-weight: 500;
-        //         font-family: var(--sub-font);
-        //         margin-bottom: 8px;
-        //     }
-
-        //     p {
-        //         font-size: 14px;
-        //         font-weight: 400;
-        //         font-family: var(--sub-font);
-        //         letter-spacing: 0.5px;
-        //         width: 250px;
-        //     }
-
-        //     .includes {
-        //         gap: 30px;
-        //     }
-
-        //     #includes_show {
-        //         display: none;
-        //         opacity: 0;
-        //         transition: opacity 0.3s ease;
-        //         /* Smooth transition for visibility */
-        //     }
-
-        // }
-
-        // .sec-3-panels.active:hover {
-        //     flex: 2;
-        //     // background-color: lightblue;
-        // }
-
-        // /* Reset when hover ends */
-        // .sec-3-panels {
-        //     flex: 1;
-        // }
+        
 
         .sec-3-panels {
             flex: 1;
@@ -615,6 +578,7 @@ body {
     .sec-4-card-wrap:hover {
         border: 1px solid var(--primary-color);
         background-color: var(--primary-color);
+        transform: translateY(-10px);
     }
 
     .sec-4-btn-wrap {
@@ -744,11 +708,17 @@ body {
                 margin: 0px;
                 padding: 0px;
 
-                li {
-                    font-size: 14px;
-                    font-weight: 400;
-                    font-family: var(--sub-font);
+                a {
+                    text-decoration: none;
+                    color: inherit;
+
+                    li {
+                        font-size: 14px;
+                        font-weight: 400;
+                        font-family: var(--sub-font);
+                    }
                 }
+
             }
         }
 
@@ -1363,7 +1333,7 @@ body {
                 width: unset !important;
             }
 
-            .sec-2-phara-3 {}
+            
 
 
         }
