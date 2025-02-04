@@ -180,7 +180,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 850px;
   padding-top: 18px;
 }
 .nav-bar-sp .social-media-wrap {
@@ -295,7 +295,7 @@ body {
   padding-inline: 100px;
 }
 .nav-bar-sp .hero-sp .hero-align .hero-text {
-  height: 86vh;
+  height: 729px;
   border-left: 1px solid rgba(255, 255, 255, 0.3);
   border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -834,7 +834,7 @@ body {
     height: 70vh;
   }
   .nav-bar-sp .hero-sp .hero-align .hero-text {
-    height: 57vh;
+    height: 50vh;
   }
   .nav-bar-sp .hero-sp .hero-align .hero-text h2 {
     font-size: 14px;
