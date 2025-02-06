@@ -82,7 +82,7 @@ body {
     background-image: url(images/hemp-burger.webp) !important;
 }
 
-.active-mob{
+.active-mob {
     right: 0px;
 }
 
@@ -129,7 +129,50 @@ body {
     }
 }
 
+// sticky menu
 
+// .menu-sticky {
+//     position: fixed;
+//     top: -60px;
+//     left: 0;
+//     width: 100%;
+//     background: #333;
+//     color: white;
+//     padding: 10px 20px;
+//     transition: top 0.3s ease-in-out;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+
+//     .logo {
+//         font-size: 24px;
+//         font-weight: bold;
+//         color: white;
+//     }
+
+//     ul {
+//         list-style: none;
+//         margin: 0 auto;
+//         padding: 0;
+//         display: flex;
+
+//         li {
+//             margin: 0 15px;
+
+//             a {
+//                 color: white;
+//                 text-decoration: none;
+//             }
+//         }
+//     }
+
+//     .hamburger {
+//         display: none;
+//         cursor: pointer;
+//         font-size: 24px;
+//         color:white;
+//     }
+// }
 
 
 
@@ -466,7 +509,7 @@ body {
     .sec-3-images-wrap {
         gap: 20px;
         width: 100%;
-        
+
 
         .sec-3-panels {
             flex: 1;
@@ -1333,7 +1376,7 @@ body {
                 width: unset !important;
             }
 
-            
+
 
 
         }

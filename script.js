@@ -114,4 +114,41 @@ function closePopup() {
 }
 
 
+// sticky menu
+
+
+// let lastScrollTop = 0;
+// const menu = document.getElementById("stickyMenu");
+// const menuList = document.getElementById("menuList");
+
+// window.addEventListener("scroll", function () {
+//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//     if (scrollTop > lastScrollTop) {
+//         menu.style.top = "-60px";
+//     } else {
+//         menu.style.top = "0";
+//     }
+//     if (scrollTop === 0) {
+//         menu.style.top = "-60px";
+//     }
+//     lastScrollTop = scrollTop;
+// });
+
+// function toggleMenu() {
+//     if (menuList.classList.contains("show")) {
+//         menuList.style.opacity = "0";
+//         menuList.style.transform = "scaleY(0)";
+//         setTimeout(() => {
+//             menuList.classList.remove("show");
+//         }, 300);
+//     } else {
+//         menuList.classList.add("show");
+//         setTimeout(() => {
+//             menuList.style.opacity = "1";
+//             menuList.style.transform = "scaleY(1)";
+//         }, 10);
+//     }
+// }
+
+
 
