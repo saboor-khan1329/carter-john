@@ -60,6 +60,10 @@ body {
   font-family: var(--sub-font);
   transition: 350ms ease;
 }
+.jhon-cta a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .jhon-cta:hover {
   background-color: #fff;
