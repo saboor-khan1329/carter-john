@@ -102,53 +102,48 @@ function toggleMenu() {
 
 }
 
+//   mobile menu sticky
+
+function toggleMenu_sticky() {
+    var menu = document.getElementById("slideMenu_sticky");
+    menu.classList.toggle("active");
+
+}
 
 
 // booking button popup
 
-function openPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
+// function openPopup() {
+//     document.getElementById("popup").style.display = "flex";
+// }
+// function closePopup() {
+//     document.getElementById("popup").style.display = "none";
+// }
 
 
 // sticky menu
 
 
-// let lastScrollTop = 0;
-// const menu = document.getElementById("stickyMenu");
-// const menuList = document.getElementById("menuList");
+let lastScrollTop = 0;
+const stickyNav = document.getElementById("stickyHiddenNav");
 
-// window.addEventListener("scroll", function () {
-//     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//     if (scrollTop > lastScrollTop) {
-//         menu.style.top = "-60px";
-//     } else {
-//         menu.style.top = "0";
-//     }
-//     if (scrollTop === 0) {
-//         menu.style.top = "-60px";
-//     }
-//     lastScrollTop = scrollTop;
-// });
+window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop === 0) {
+        // Hide menu when at the top
+        stickyNav.style.transform = "translateY(-100%)";
+    } else if (scrollTop < lastScrollTop) {
+        // Scrolling up
+        stickyNav.style.transform = "translateY(0)";
+    } else {
+        // Scrolling down
+        stickyNav.style.transform = "translateY(-100%)";
+    }
+    
+    lastScrollTop = scrollTop;
+});
 
-// function toggleMenu() {
-//     if (menuList.classList.contains("show")) {
-//         menuList.style.opacity = "0";
-//         menuList.style.transform = "scaleY(0)";
-//         setTimeout(() => {
-//             menuList.classList.remove("show");
-//         }, 300);
-//     } else {
-//         menuList.classList.add("show");
-//         setTimeout(() => {
-//             menuList.style.opacity = "1";
-//             menuList.style.transform = "scaleY(1)";
-//         }, 10);
-//     }
-// }
 
 
 

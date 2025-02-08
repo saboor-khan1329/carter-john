@@ -28,7 +28,6 @@
 html,
 body {
   width: 100%;
-  height: 100%;
   overflow-x: hidden !important;
   scroll-behavior: smooth;
 }
@@ -49,7 +48,11 @@ body {
   height: 33.33px;
 }
 
-.jhon-cta {
+.jhon-cta-link {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.jhon-cta-link .jhon-cta {
   width: 264px;
   height: 57px;
   border: 2px solid #FFFFFF;
@@ -59,10 +62,6 @@ body {
   font-weight: 600;
   font-family: var(--sub-font);
   transition: 350ms ease;
-}
-.jhon-cta a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .jhon-cta:hover {
@@ -83,42 +82,68 @@ body {
   right: 0px;
 }
 
-.popup-overlay {
-  display: none;
+.sticky-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-.popup-overlay .popup-content {
   background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 90%;
-  max-width: 600px;
-  position: relative;
-  height: 719px;
-}
-.popup-overlay .popup-content iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-.popup-overlay .popup-content .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: #155eef;
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.12);
   color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 16px;
+  text-align: center;
+  padding: 20px 20px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-100%);
+  z-index: 999;
+}
+.sticky-nav ul {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .sticky-nav ul {
+    gap: 25px !important;
+  }
+}
+.sticky-nav ul li {
+  list-style: none;
+}
+.sticky-nav ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-family: var(--sub-font);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: 250ms ease;
+  padding: 0px;
+  position: relative;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .sticky-nav ul li a {
+    font-size: 12px;
+  }
+}
+.sticky-nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--secondary-color);
+  transition: transform 250ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.sticky-nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+@media only screen and (max-width: 991px) {
+  .sticky-nav img {
+    width: 100px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -396,7 +421,7 @@ body {
   background-position: center;
   background-size: cover;
   padding-inline: 31px;
-  padding-bottom: 51px;
+  padding-bottom: 35px;
   cursor: pointer;
 }
 .sec-3-sp .sec-3-images-wrap .sec-3-panels #includes-show {
@@ -415,6 +440,20 @@ body {
   font-weight: 400;
   font-family: var(--sub-font);
   letter-spacing: 0.5px;
+}
+.sec-3-sp .sec-3-images-wrap .sec-3-panels #includes-show a {
+  font-family: var(--sub-font);
+  font-size: 18px;
+  color: inherit;
+  font-weight: 500;
+  text-decoration: none;
+}
+.sec-3-sp .sec-3-images-wrap .sec-3-panels #includes-show a i {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+.sec-3-sp .sec-3-images-wrap .sec-3-panels #includes-show a:hover i {
+  transform: translateX(5px);
 }
 .sec-3-sp .sec-3-images-wrap .sec-3-panels.active #includes-show {
   opacity: 1;
@@ -601,7 +640,7 @@ body {
   }
   .nav-bar-sp {
     background-position: left;
-    height: 70vh;
+    height: 75vh;
     padding-top: 0px;
   }
   .nav-bar-sp .social-media-wrap {
@@ -757,6 +796,20 @@ body {
     font-family: var(--sub-font);
     letter-spacing: 0.5px;
   }
+  .sec-3-sp .sec-3-images-wrap-mob .sec-3-panels-mob #includes-show-mob a {
+    font-family: var(--sub-font);
+    font-size: 18px;
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .sec-3-sp .sec-3-images-wrap-mob .sec-3-panels-mob #includes-show-mob a i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+  }
+  .sec-3-sp .sec-3-images-wrap-mob .sec-3-panels-mob #includes-show-mob a:hover i {
+    transform: translateX(5px);
+  }
   .sec-4-sp {
     margin-top: 40px;
   }
@@ -885,6 +938,20 @@ body {
   .sec-3-sp .sec-3-text-wrap h3 {
     font-size: 20px;
     margin-bottom: 40px;
+  }
+  .sec-3-sp .sec-3-text-wrap a {
+    font-family: var(--sub-font);
+    font-size: 18px;
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .sec-3-sp .sec-3-text-wrap a i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+  }
+  .sec-3-sp .sec-3-text-wrap a:hover i {
+    transform: translateX(5px);
   }
   .sec-3-sp .sec-3-images-wrap-mob {
     gap: 20px;
