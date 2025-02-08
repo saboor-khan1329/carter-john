@@ -81,13 +81,7 @@ body {
     scale: (0.95);
 }
 
-.navbar-toggler {
-    border: 1px solid #fff !important;
-}
 
-.navbar-toggler-icon {
-    background-image: url(images/hemp-burger.webp) !important;
-}
 
 .active-mob {
     right: 0px;
@@ -208,21 +202,6 @@ body {
     }
 }
 
-
-
-
-// mobile menu
-@media (max-width: 991px) {
-    .menu {
-        width: 100%;
-        right: -100%;
-    }
-
-    .menu.active {
-        right: 0;
-    }
-}
-
 .menu-container {
     // padding: 20px;
 
@@ -280,8 +259,6 @@ body {
 .menu.active {
     right: 0;
 }
-
-
 
 // Nav bar
 
@@ -584,14 +561,19 @@ body {
                     color: inherit;
                     font-weight: 500;
                     text-decoration: none;
+                    transition: transform 0.3s ease;
 
                     i {
                         font-size: 14px;
-                        transition: transform 0.3s ease; // Smooth transition for movement
+                        transition: transform 0.3s ease; 
                     }
 
                     &:hover i {
-                        transform: translateX(5px); // Moves icon 5px to the right on hover
+                        transform: translateX(5px); 
+                    }
+
+                    &:hover{
+                        color: var(--secondary-color);
                     }
                 }
             }
@@ -812,6 +794,24 @@ body {
                         font-size: 14px;
                         font-weight: 400;
                         font-family: var(--sub-font);
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: -4px;
+                            width: 100%;
+                            height: 2px;
+                            background-color: var(--menu-bg);
+                            transition: transform 250ms ease-in-out;
+                            transform: scaleX(0);
+                            transform-origin: left;
+                        }
+            
+                        &:hover::after {
+                            transform: scaleX(1);
+                        }
                     }
                 }
 
@@ -833,6 +833,18 @@ body {
 
 
         }
+    }
+}
+
+// mobile menu
+@media (max-width: 991px) {
+    .menu {
+        width: 100%;
+        right: -100%;
+    }
+
+    .menu.active {
+        right: 0;
     }
 }
 

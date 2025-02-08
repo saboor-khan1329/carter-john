@@ -1,0 +1,39 @@
+.nav-bar-sp-book {
+  background-color: #fff;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  padding-top: 18px;
+}
+.nav-bar-sp-book .navbar-nav {
+  gap: 42px;
+}
+.nav-bar-sp-book .navbar-nav .nav-text {
+  font-family: var(--sub-font);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1E2543 !important;
+  transition: 250ms ease;
+  position: relative;
+  text-decoration: none;
+  padding: 0px;
+}
+.nav-bar-sp-book .navbar-nav .nav-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--secondary-color);
+  transition: transform 250ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.nav-bar-sp-book .navbar-nav .nav-text:hover::after {
+  transform: scaleX(1);
+}
+.nav-bar-sp-book .navbar-nav .nav-text:hover {
+  color: var(--secondary-color) !important;
+}/*# sourceMappingURL=book.css.map */

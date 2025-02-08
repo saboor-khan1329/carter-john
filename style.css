@@ -70,14 +70,6 @@ body {
   scale: 0.95;
 }
 
-.navbar-toggler {
-  border: 1px solid #fff !important;
-}
-
-.navbar-toggler-icon {
-  background-image: url(images/hemp-burger.webp) !important;
-}
-
 .active-mob {
   right: 0px;
 }
@@ -146,15 +138,6 @@ body {
   }
 }
 
-@media (max-width: 991px) {
-  .menu {
-    width: 100%;
-    right: -100%;
-  }
-  .menu.active {
-    right: 0;
-  }
-}
 .menu-container .menu-button {
   color: #fff;
   border: 1px solid #fff;
@@ -447,6 +430,7 @@ body {
   color: inherit;
   font-weight: 500;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 .sec-3-sp .sec-3-images-wrap .sec-3-panels #includes-show a i {
   font-size: 14px;
@@ -454,6 +438,9 @@ body {
 }
 .sec-3-sp .sec-3-images-wrap .sec-3-panels #includes-show a:hover i {
   transform: translateX(5px);
+}
+.sec-3-sp .sec-3-images-wrap .sec-3-panels #includes-show a:hover {
+  color: var(--secondary-color);
 }
 .sec-3-sp .sec-3-images-wrap .sec-3-panels.active #includes-show {
   opacity: 1;
@@ -615,6 +602,22 @@ body {
   font-size: 14px;
   font-weight: 400;
   font-family: var(--sub-font);
+  position: relative;
+}
+.foot-sp .foot-wrap .foot-tabs-wrap ul a li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--menu-bg);
+  transition: transform 250ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.foot-sp .foot-wrap .foot-tabs-wrap ul a li:hover::after {
+  transform: scaleX(1);
 }
 .foot-sp .foot-wrap .sub_foot {
   border-top: 0.8px solid rgba(255, 255, 255, 0.5);
@@ -627,6 +630,15 @@ body {
   margin-bottom: 0px;
 }
 
+@media (max-width: 991px) {
+  .menu {
+    width: 100%;
+    right: -100%;
+  }
+  .menu.active {
+    right: 0;
+  }
+}
 @media only screen and (max-width: 767px) {
   .jhon-cta {
     width: 180px;
