@@ -1,9 +1,26 @@
+window.onload = function () {
+    setTimeout(() => {
+        let preloader = document.getElementById("preloader");
+
+        // Apply fade-out effect
+        preloader.style.opacity = "0";
+        preloader.style.transition = "opacity 1s ease-out";
+
+        // Wait for transition to finish before hiding the preloader
+        setTimeout(() => {
+            preloader.style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }, 1000); // Matches the transition duration
+    }, 1000); // Delay before starting fade-out
+};
+
+
+
 const panels = document.querySelectorAll('.sec-3-panels');
 const includesShow = document.querySelectorAll('#includes-show');
 
-// Initial setup
 if (panels.length > 0) {
-    // Set the first panel to flex: 2, active, and ensure its #includes-show is visible
+    
     panels[0].classList.add('active');
     panels[0].style.flex = "2";
     if (includesShow[0]) {
@@ -11,7 +28,6 @@ if (panels.length > 0) {
         includesShow[0].style.visibility = "visible";
     }
 
-    // Hide all other includes-show elements by default
     includesShow.forEach((include, index) => {
         if (index !== 0) {
             include.style.opacity = "0";
@@ -21,7 +37,6 @@ if (panels.length > 0) {
 
     panels.forEach((panel, index) => {
         panel.addEventListener('mouseover', () => {
-            // Shrink all panels and remove the active class
             panels.forEach((p, i) => {
                 p.style.flex = "1";
                 p.classList.remove('active');
@@ -31,7 +46,6 @@ if (panels.length > 0) {
                 }
             });
 
-            // Expand the hovered panel and mark it active
             panel.style.flex = "2";
             panel.classList.add('active');
             if (includesShow[index]) {
@@ -41,17 +55,14 @@ if (panels.length > 0) {
         });
 
         panel.addEventListener('mouseout', () => {
-            // Reset all panels to flex: 1
             panels.forEach(p => {
                 p.style.flex = "1";
                 p.classList.remove('active');
             });
 
-            // Ensure the first panel remains expanded and active
             panels[0].style.flex = "2";
             panels[0].classList.add('active');
 
-            // Ensure the first panel's #includes-show remains visible
             includesShow.forEach((include, i) => {
                 if (i === 0) {
                     include.style.opacity = "1";
@@ -72,21 +83,21 @@ var swiper = new Swiper("#sec-5-review-slider", {
     slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
-    loop: true, // Enables looping
+    loop: true, 
     autoplay: {
-        delay: 2500, // Auto-plays every 3 seconds
-        disableOnInteraction: false, // Keeps autoplay active even after user interaction
+        delay: 2500, 
+        disableOnInteraction: false, 
     },
     breakpoints: {
-        320: { // For small screens (phones)
+        320: { 
             slidesPerView: 1,
             spaceBetween: 10,
         },
-        768: { // For tablets
+        768: { 
             slidesPerView: 2,
             spaceBetween: 20,
         },
-        1024: { // For desktops
+        1024: { 
             slidesPerView: 3,
             spaceBetween: 30,
         },
@@ -131,18 +142,19 @@ window.addEventListener("scroll", function() {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
     if (scrollTop === 0) {
-        // Hide menu when at the top
         stickyNav.style.transform = "translateY(-100%)";
     } else if (scrollTop < lastScrollTop) {
-        // Scrolling up
         stickyNav.style.transform = "translateY(0)";
     } else {
-        // Scrolling down
         stickyNav.style.transform = "translateY(-100%)";
     }
     
     lastScrollTop = scrollTop;
 });
+
+
+
+
 
 
 
