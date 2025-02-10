@@ -55,6 +55,9 @@ body {
 #preloader .loader {
   width: 200px;
 }
+#preloader .loader img {
+  width: 200px;
+}
 
 .fade-out {
   opacity: 0;

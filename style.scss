@@ -70,7 +70,11 @@ body {
         width: 200px;
         // height: 50px;
         // animation: spin 1s linear infinite;
-        
+
+        img {
+            width: 200px;
+        }
+
     }
 }
 
@@ -225,7 +229,7 @@ body {
 
     img {
         @media only screen and (max-width:991px) {
-            width: 100px ;
+            width: 100px;
         }
 
     }
@@ -268,7 +272,7 @@ body {
         border: none;
         padding: 5px 10px;
         cursor: pointer;
-        
+
     }
 
     a {
@@ -594,14 +598,14 @@ body {
 
                     i {
                         font-size: 14px;
-                        transition: transform 0.3s ease; 
+                        transition: transform 0.3s ease;
                     }
 
                     &:hover i {
-                        transform: translateX(5px); 
+                        transform: translateX(5px);
                     }
 
-                    &:hover{
+                    &:hover {
                         color: var(--secondary-color);
                     }
                 }
@@ -837,7 +841,7 @@ body {
                             transform: scaleX(0);
                             transform-origin: left;
                         }
-            
+
                         &:hover::after {
                             transform: scaleX(1);
                         }
