@@ -57,6 +57,7 @@ body {
 }
 #preloader .loader img {
   width: 200px;
+  position: static;
 }
 
 .fade-out {
@@ -324,8 +325,6 @@ body {
 }
 .nav-bar-sp .hero-sp .hero-align .hero-text {
   height: 729px;
-  border-left: 1px solid rgba(255, 255, 255, 0.3);
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 .nav-bar-sp .hero-sp .hero-align .hero-text h2 {
   font-size: 28px;
@@ -373,7 +372,7 @@ body {
 }
 .sec-2-sp .sec-2-text-wrap .sec-2-phara-1,
 .sec-2-sp .sec-2-text-wrap .sec-2-phara-2 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   font-family: var(--sub-font);
   line-height: 31px;
@@ -435,7 +434,7 @@ body {
   margin-bottom: 8px;
 }
 .sec-3-sp .sec-3-images-wrap .sec-3-panels #includes-show p {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   font-family: var(--sub-font);
   letter-spacing: 0.5px;
@@ -486,14 +485,14 @@ body {
 }
 .sec-4-sp .sec-4-card-wrap {
   width: 100%;
-  height: 256px;
+  height: 287px;
   border: 1px solid var(--third-color);
   padding: 39px 40px 31px 27px;
   transition: 350ms ease;
   cursor: pointer;
 }
 .sec-4-sp .sec-4-card-wrap h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
   font-family: var(--sub-font);
   text-transform: uppercase;
@@ -502,22 +501,12 @@ body {
   color: var(--primary-color);
 }
 .sec-4-sp .sec-4-card-wrap p {
-  font-size: 14px;
+  font-size: 16px;
+  letter-spacing: 0.8px;
   font-weight: 400;
   font-family: var(--sub-font);
   line-height: 19px;
   color: var(--primary-color);
-}
-.sec-4-sp .sec-4-card-wrap:hover h3 {
-  color: var(--secondary-color);
-}
-.sec-4-sp .sec-4-card-wrap:hover p {
-  color: #FFFFFF;
-}
-.sec-4-sp .sec-4-card-wrap:hover {
-  border: 1px solid var(--primary-color);
-  background-color: var(--primary-color);
-  transform: translateY(-10px);
 }
 .sec-4-sp .sec-4-btn-wrap {
   margin-top: 44px;
@@ -556,7 +545,7 @@ body {
   padding: 40px 30px 21px 30px;
 }
 .sec-5-sp .sec-5-review-slider-wrap .sec-5-review-hi .sec-5-review-card-wrap .text-content p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   font-family: var(--sub-font);
   line-height: 21px;
@@ -589,7 +578,7 @@ body {
   width: 851px;
 }
 .your-home-sp .your-home-text-wrap p {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
   font-family: var(--sub-font);
   line-height: 31px;
@@ -615,7 +604,7 @@ body {
   color: inherit;
 }
 .foot-sp .foot-wrap .foot-tabs-wrap ul a li {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   font-family: var(--sub-font);
   position: relative;
@@ -640,7 +629,7 @@ body {
 }
 .foot-sp .foot-wrap .sub_foot .carter-john-home-concierge p,
 .foot-sp .foot-wrap .sub_foot .priv p {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   font-family: var(--sub-font);
   margin-bottom: 0px;

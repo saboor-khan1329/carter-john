@@ -73,6 +73,7 @@ body {
 
         img {
             width: 200px;
+            position: static;
         }
 
     }
@@ -444,8 +445,8 @@ body {
 
             .hero-text {
                 height: 729px;
-                border-left: 1px solid rgba(255, 255, 255, 0.3);
-                border-right: 1px solid rgba(255, 255, 255, 0.3);
+                // border-left: 1px solid rgba(255, 255, 255, 0.3);
+                // border-right: 1px solid rgba(255, 255, 255, 0.3);
 
                 h2 {
                     font-size: 28px;
@@ -504,7 +505,7 @@ body {
 
         .sec-2-phara-1,
         .sec-2-phara-2 {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 500;
             font-family: var(--sub-font);
             line-height: 31px;
@@ -582,7 +583,7 @@ body {
                 }
 
                 p {
-                    font-size: 14px;
+                    font-size: 15px;
                     font-weight: 400;
                     font-family: var(--sub-font);
                     letter-spacing: 0.5px;
@@ -651,14 +652,14 @@ body {
 
     .sec-4-card-wrap {
         width: 100%;
-        height: 256px;
+        height: 287px;
         border: 1px solid var(--third-color);
         padding: 39px 40px 31px 27px;
         transition: 350ms ease;
         cursor: pointer;
 
         h3 {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 500;
             font-family: var(--sub-font);
             text-transform: uppercase;
@@ -668,29 +669,30 @@ body {
         }
 
         p {
-            font-size: 14px;
+            font-size: 16px;
+            letter-spacing: 0.8px;
             font-weight: 400;
             font-family: var(--sub-font);
             line-height: 19px;
             color: var(--primary-color);
         }
 
-        &:hover {
-            h3 {
-                color: var(--secondary-color);
-            }
+        // &:hover {
+        //     h3 {
+        //         color: var(--secondary-color);
+        //     }
 
-            p {
-                color: #FFFFFF;
-            }
-        }
+        //     p {
+        //         color: #FFFFFF;
+        //     }
+        // }
     }
 
-    .sec-4-card-wrap:hover {
-        border: 1px solid var(--primary-color);
-        background-color: var(--primary-color);
-        transform: translateY(-10px);
-    }
+    // .sec-4-card-wrap:hover {
+    //     border: 1px solid var(--primary-color);
+    //     background-color: var(--primary-color);
+    //     transform: translateY(-10px);
+    // }
 
     .sec-4-btn-wrap {
         margin-top: 44px;
@@ -746,7 +748,7 @@ body {
 
                 .text-content {
                     p {
-                        font-size: 14px;
+                        font-size: 16px;
                         font-weight: 400;
                         font-family: var(--sub-font);
                         line-height: 21px;
@@ -792,7 +794,7 @@ body {
         }
 
         p {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 500;
             font-family: var(--sub-font);
             line-height: 31px;
@@ -824,7 +826,7 @@ body {
                     color: inherit;
 
                     li {
-                        font-size: 14px;
+                        font-size: 16px;
                         font-weight: 400;
                         font-family: var(--sub-font);
                         position: relative;
@@ -857,7 +859,7 @@ body {
             .carter-john-home-concierge,
             .priv {
                 p {
-                    font-size: 12px;
+                    font-size: 14px;
                     font-weight: 500;
                     font-family: var(--sub-font);
                     margin-bottom: 0px;
@@ -1537,3 +1539,4 @@ body {
         }
     }
 }
+

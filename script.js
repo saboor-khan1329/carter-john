@@ -15,12 +15,11 @@ window.onload = function () {
 };
 
 
-
 const panels = document.querySelectorAll('.sec-3-panels');
 const includesShow = document.querySelectorAll('#includes-show');
 
 if (panels.length > 0) {
-    
+
     panels[0].classList.add('active');
     panels[0].style.flex = "2";
     if (includesShow[0]) {
@@ -83,21 +82,21 @@ var swiper = new Swiper("#sec-5-review-slider", {
     slidesPerView: 3,
     spaceBetween: 30,
     freeMode: true,
-    loop: true, 
+    loop: true,
     autoplay: {
-        delay: 2500, 
-        disableOnInteraction: false, 
+        delay: 2500,
+        disableOnInteraction: false,
     },
     breakpoints: {
-        320: { 
+        320: {
             slidesPerView: 1,
             spaceBetween: 10,
         },
-        768: { 
+        768: {
             slidesPerView: 2,
             spaceBetween: 20,
         },
-        1024: { 
+        1024: {
             slidesPerView: 3,
             spaceBetween: 30,
         },
@@ -138,9 +137,9 @@ function toggleMenu_sticky() {
 let lastScrollTop = 0;
 const stickyNav = document.getElementById("stickyHiddenNav");
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
+
     if (scrollTop === 0) {
         stickyNav.style.transform = "translateY(-100%)";
     } else if (scrollTop < lastScrollTop) {
@@ -148,7 +147,7 @@ window.addEventListener("scroll", function() {
     } else {
         stickyNav.style.transform = "translateY(-100%)";
     }
-    
+
     lastScrollTop = scrollTop;
 });
 
