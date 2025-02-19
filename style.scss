@@ -656,7 +656,7 @@ body {
         border: 1px solid var(--third-color);
         padding: 39px 40px 31px 27px;
         transition: 350ms ease;
-        cursor: pointer;
+        
 
         h3 {
             font-size: 22px;
@@ -677,22 +677,22 @@ body {
             color: var(--primary-color);
         }
 
-        // &:hover {
-        //     h3 {
-        //         color: var(--secondary-color);
-        //     }
+        &:hover {
+            h3 {
+                color: var(--secondary-color);
+            }
 
-        //     p {
-        //         color: #FFFFFF;
-        //     }
-        // }
+            p {
+                color: #FFFFFF;
+            }
+        }
     }
 
-    // .sec-4-card-wrap:hover {
-    //     border: 1px solid var(--primary-color);
-    //     background-color: var(--primary-color);
-    //     transform: translateY(-10px);
-    // }
+    .sec-4-card-wrap:hover {
+        border: 1px solid var(--primary-color);
+        background-color: var(--primary-color);
+        transform: translateY(-10px);
+    }
 
     .sec-4-btn-wrap {
         margin-top: 44px;
@@ -1539,4 +1539,3 @@ body {
         }
     }
 }
-

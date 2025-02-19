@@ -489,7 +489,6 @@ body {
   border: 1px solid var(--third-color);
   padding: 39px 40px 31px 27px;
   transition: 350ms ease;
-  cursor: pointer;
 }
 .sec-4-sp .sec-4-card-wrap h3 {
   font-size: 22px;
@@ -507,6 +506,17 @@ body {
   font-family: var(--sub-font);
   line-height: 19px;
   color: var(--primary-color);
+}
+.sec-4-sp .sec-4-card-wrap:hover h3 {
+  color: var(--secondary-color);
+}
+.sec-4-sp .sec-4-card-wrap:hover p {
+  color: #FFFFFF;
+}
+.sec-4-sp .sec-4-card-wrap:hover {
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  transform: translateY(-10px);
 }
 .sec-4-sp .sec-4-btn-wrap {
   margin-top: 44px;
