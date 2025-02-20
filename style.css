@@ -803,7 +803,6 @@ body {
     background-size: cover;
     padding-inline: 20px;
     padding-bottom: 20px;
-    cursor: pointer;
   }
   .sec-3-sp .sec-3-images-wrap-mob .sec-3-panels-mob #includes-show-mob {
     opacity: unset;
