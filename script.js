@@ -110,14 +110,30 @@ function toggleMenu() {
     var menu = document.getElementById("slideMenu");
     menu.classList.toggle("active");
 
+    // Delay showing inner content by 500ms
+    setTimeout(function () {
+        if (menu.classList.contains("active")) {
+            menu.classList.add("show-content");
+        } else {
+            menu.classList.remove("show-content");
+        }
+    }, 500);
 }
+
 
 //   mobile menu sticky
 
 function toggleMenu_sticky() {
     var menu = document.getElementById("slideMenu_sticky");
     menu.classList.toggle("active");
-
+    // Delay showing inner content by 500ms
+    setTimeout(function () {
+        if (menu.classList.contains("active")) {
+            menu.classList.add("show-content");
+        } else {
+            menu.classList.remove("show-content");
+        }
+    }, 500);
 }
 
 

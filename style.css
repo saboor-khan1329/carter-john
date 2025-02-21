@@ -155,6 +155,29 @@ body {
   }
 }
 
+#slideMenu {
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#slideMenu.active {
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+  transition: transform 0.5s ease, visibility 0s;
+}
+
+#slideMenu.show-content a {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+#slideMenu a {
+  opacity: 0;
+}
+
 .menu-container .menu-button {
   color: #fff;
   border: 1px solid #fff;
@@ -178,6 +201,7 @@ body {
   color: var(--menu-text-color);
   transition: right 0.3s ease-in-out;
   padding-top: 60px;
+  text-align: center;
 }
 .menu .close-button {
   position: absolute;
